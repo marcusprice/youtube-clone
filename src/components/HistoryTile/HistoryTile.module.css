@@ -1,0 +1,70 @@
+.HistoryTile {
+    display: flex;
+    margin: 32px 0;
+}
+
+.PreviewWindow {
+    width: 35%;
+    aspect-ratio: 16/9;
+    background: green;
+    border-radius: 10px;
+}
+
+.VideoInfo {
+    width: 65%;
+    padding-left: 16px;
+}
+
+.VideoTitleBar {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.Right {
+    display: flex;
+}
+
+.Right button {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    border: 0;
+    padding: 0;
+    flex-grow: 0;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+}
+
+.RemoveVideo:hover {
+    background: #333;
+}
+
+.Title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.AddInfo {
+    margin-bottom: 16px;
+}
+
+.AddInfo, .Desc span {
+    font-weight: 500;
+    font-size: 12px;
+    color: #999;
+}
+
+.Desc {
+    flex-grow: 1;
+}
+
+.Desc span {
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+}

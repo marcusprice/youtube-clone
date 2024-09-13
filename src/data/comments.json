@@ -1,0 +1,170 @@
+[
+  {
+    "username": "UFOWatcher",
+    "comment_text": "This is incredible! How can anyone still deny the existence of UFOs after seeing this?",
+    "likes": 432,
+    "published_time": "2024-08-30T12:34:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/1.jpg"
+  },
+  {
+    "username": "SkepticDude",
+    "comment_text": "It's just a drone or some classified military tech. Nothing to get excited about.",
+    "likes": 67,
+    "published_time": "2024-08-30T14:22:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/2.jpg"
+  },
+  {
+    "username": "AlienBeliever88",
+    "comment_text": "Finally, some solid evidence! I've been waiting for this my whole life.",
+    "likes": 301,
+    "published_time": "2024-08-30T09:45:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/3.jpg"
+  },
+  {
+    "username": "ScienceNerd",
+    "comment_text": "The physics of this object make no sense according to our current understanding. We need to study this more!",
+    "likes": 298,
+    "published_time": "2024-08-30T11:15:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/4.jpg"
+  },
+  {
+    "username": "ConspiracyHunter",
+    "comment_text": "The government has been hiding this stuff for years. This is just the tip of the iceberg.",
+    "likes": 150,
+    "published_time": "2024-08-29T20:05:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/5.jpg"
+  },
+  {
+    "username": "AviationExpert",
+    "comment_text": "As a pilot, I can tell you that this is unlike anything I've ever seen in the sky.",
+    "likes": 245,
+    "published_time": "2024-08-29T18:35:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/6.jpg"
+  },
+  {
+    "username": "TechSavvy",
+    "comment_text": "It's probably just a glitch in the camera or sensor equipment.",
+    "likes": 54,
+    "published_time": "2024-08-30T07:50:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/7.jpg"
+  },
+  {
+    "username": "Stargazer42",
+    "comment_text": "This video gives me chills. There's so much we don't know about our universe.",
+    "likes": 187,
+    "published_time": "2024-08-29T21:15:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/8.jpg"
+  },
+  {
+    "username": "NASAfan",
+    "comment_text": "Can we get NASA on this? They need to investigate!",
+    "likes": 220,
+    "published_time": "2024-08-30T13:05:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/9.jpg"
+  },
+  {
+    "username": "OccamRazor",
+    "comment_text": "The simplest explanation is usually the correct one. It's probably just military tech.",
+    "likes": 132,
+    "published_time": "2024-08-30T06:40:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/10.jpg"
+  },
+  {
+    "username": "XFilesFan",
+    "comment_text": "The truth is out there. This video is proof!",
+    "likes": 298,
+    "published_time": "2024-08-29T19:30:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/11.jpg"
+  },
+  {
+    "username": "CuriousMind",
+    "comment_text": "What are the chances that this is something extraterrestrial? I want to believe!",
+    "likes": 174,
+    "published_time": "2024-08-30T08:25:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/12.jpg"
+  },
+  {
+    "username": "MilitaryInsider",
+    "comment_text": "I've seen some weird stuff during my time in the military, but this... this is something else.",
+    "likes": 204,
+    "published_time": "2024-08-29T23:10:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/13.jpg"
+  },
+  {
+    "username": "PhysicsGeek",
+    "comment_text": "If this object is real, it could revolutionize our understanding of physics.",
+    "likes": 212,
+    "published_time": "2024-08-30T05:55:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/14.jpg"
+  },
+  {
+    "username": "SkepticalViewer",
+    "comment_text": "This video raises more questions than answers. We need more evidence.",
+    "likes": 98,
+    "published_time": "2024-08-30T10:40:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/15.jpg"
+  },
+  {
+    "username": "AlienHunter",
+    "comment_text": "This is it! We're not alone in the universe!",
+    "likes": 337,
+    "published_time": "2024-08-29T16:50:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/16.jpg"
+  },
+  {
+    "username": "LogicalThinker",
+    "comment_text": "I'm not convinced. We need more data before jumping to conclusions.",
+    "likes": 83,
+    "published_time": "2024-08-30T09:00:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/17.jpg"
+  },
+  {
+    "username": "TechAnalyst",
+    "comment_text": "The movements of this object are too erratic for any known aircraft. This is something new.",
+    "likes": 256,
+    "published_time": "2024-08-30T03:45:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/18.jpg"
+  },
+  {
+    "username": "SpaceFan",
+    "comment_text": "This makes me more excited about space exploration. Who knows what's out there?",
+    "likes": 194,
+    "published_time": "2024-08-30T11:55:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/19.jpg"
+  },
+  {
+    "username": "Believer01",
+    "comment_text": "I've always known we weren't alone. This video just confirms it.",
+    "likes": 265,
+    "published_time": "2024-08-29T22:20:00Z",
+    "edited": true,
+    "user_avatar": "/src/assets/avatars/20.jpg"
+  },
+  {
+    "username": "Debunker",
+    "comment_text": "I've seen similar videos debunked. This is probably just a misidentified aircraft.",
+    "likes": 45,
+    "published_time": "2024-08-30T07:15:00Z",
+    "edited": false,
+    "user_avatar": "/src/assets/avatars/21.jpg"
+  }
+]

@@ -1,0 +1,106 @@
+.HistoryPage {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+} 
+
+.History {
+    height: 100%;
+    width: 100%;
+}
+
+.HistoryContent {
+    height: 100%;
+    padding-bottom: 128px;
+    display: flex;
+}
+
+.HistoryVideos {
+    height: 100%;
+    overflow: auto;
+    width: 68%;
+    padding-right: 15%;
+}
+
+.HistoryControls {
+    width: 25%;
+    padding-left: 8px;
+}
+
+.PageTitle {
+    font-size: 36px;
+}
+
+.Timeframe {
+    font-size: 22px;
+    margin: 0;
+}
+
+.SearchBar {
+    width: 100%;
+    border-bottom: solid #fff 1px;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 32px;
+    padding-left: 8px;
+}
+
+.SearchBar div {
+    display: flex;
+    align-items: center;
+}
+
+.SearchBar button, .SearchBar div button, .SearchBar div input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.SearchBar button {
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.SearchBar button:hover {
+    background: #222;
+}
+
+.SearchBar input:focus {
+    outline: none;
+}
+
+.SearchBar button i {
+    font-size: 18px;
+}
+
+.HistoryButton {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.HistoryButton i {
+    font-size: 20px;
+}
+
+.HistoryButton:hover {
+    background: #222;
+}

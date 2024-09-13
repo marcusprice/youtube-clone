@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.MenuLogo {
+    display: flex;
+    align-items: center;
+}
+
+.MenuLogo button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-right: 16px;
+}
+
+.PersonalBar {
+    display: flex;
+    align-items: center;
+}
+
+.Cast, .Notifications {
+    background: none;
+    color: #fff;
+    border: 0;
+    font-size: 22px;
+    margin: 0 8px;
+}
+
+.Notifications {
+    margin-right: 16px;
+}

@@ -1,0 +1,26 @@
+.SM {
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.MD {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.LG {
+    border: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+}

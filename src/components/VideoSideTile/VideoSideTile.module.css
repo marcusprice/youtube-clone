@@ -1,0 +1,25 @@
+.VideoSideTile {
+    display: flex;
+    width: 100%;
+    margin-bottom: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.Preview {
+    width: 40%;
+    aspect-ratio: 16/9;
+    background: gray;
+    border-radius: 12px;
+
+}
+
+.Info {
+    width: 55%;
+    padding-left: 8px;
+    font-size: 12px;
+}
+
+.Menu {
+    width: 5%;
+}

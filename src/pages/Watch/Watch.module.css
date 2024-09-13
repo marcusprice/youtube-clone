@@ -1,0 +1,105 @@
+.Watch {
+    width: 100%;
+    padding: 32px 8px;
+    height: calc(100vh - 104px);
+    display: flex;
+    overflow: auto;
+}
+
+.Left {
+    margin-right: 32px;
+    flex-grow: 1; 
+}
+
+.VideoInfo {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.VideoInfoLeft {
+    display: flex;
+    align-items: center;
+}
+
+.UploaderAvatar {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 100%;
+    margin-right: 8px;
+    background-position: center;
+    background-size: cover;
+}
+
+.UploaderInfo {
+    margin-right: 32px;
+}
+
+.UploaderInfo span {
+   display: block; 
+}
+
+.Subscribe {
+    height: 32px;
+    border: 0;
+    border-radius: 64px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.VideoInfoRight {
+    display: flex;
+}
+
+.VideoInfoRight button {
+    height: 32px;
+    border: none;
+}
+
+.LikeDislike {
+    display: flex;
+}
+
+.Like {
+    color: #fff;
+    border-radius: 32px 0 0 32px;
+    display: flex;
+    align-items: center;
+    border-right: solid #555 1px !important;
+    padding-left: 8px;
+    background: #333;
+}
+
+.Dislike {
+    color: #fff;
+    border-radius: 0 32px 32px 0px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background: #333;
+}
+
+.Share, .Download, .Cut, .More {
+    background: #333;
+    color: #fff;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.Description {
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    background: #333;
+    font-size: 15px;
+}
+
+.Right {
+    width: 30%;
+}

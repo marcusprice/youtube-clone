@@ -1,0 +1,96 @@
+.Mic {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: gray;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.Mic:hover {
+    background: #333;
+}
+
+.MicMask {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: rgb(11, 11, 11, .4);
+}
+
+.MicBox {
+    margin-top: 8px;
+    width: 576px;
+    height: 480px;
+    background: #222;
+    padding: 32px 16px 64px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.Header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Header button {
+    background: transparent;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header button:hover {
+    background: #333;
+}
+
+.Body {
+    flex-grow: 1;
+}
+
+.Body span {
+    font-size: 22px;
+}
+
+.Button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Button button {
+    width: 74px;
+    height: 74px;
+    border-radius: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Recording {
+    background: red;
+}

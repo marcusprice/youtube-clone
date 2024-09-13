@@ -1,0 +1,19 @@
+.Tag {
+    border: none;   
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 700;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.Tag:hover {
+    background: #444;
+}
+
+.Toggled {
+    background: #fff !important;
+    color: #000 !important;
+}

@@ -1,0 +1,70 @@
+.SideBar {
+    padding-top: 24px;
+    margin-right: 64px;
+    height: 100%;
+    overflow: auto;
+    width: 256px;
+}
+
+.SideBar h2 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.SideBar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.SideBar ul li a {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+} 
+
+.SideBar ul li a button {
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border:none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.SideBar ul li a button:hover, .Selected {
+    background: #222 !important;
+}
+
+.SideBar ul li i {
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.SideBar ul li span {
+    font-size: 16px;
+}
+
+.SubName {
+    font-size: 14px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+hr {
+    margin: 24px 0;
+    border: solid .5px rgba(255,255,255,0.15);
+}
+
+nav ul, nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    width: 100%;
+}
