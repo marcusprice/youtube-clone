@@ -42,9 +42,7 @@ export default function History() {
     return(
         <div class={styles.HistoryPage}>
             <div class={styles.History}>
-                <div>
-                    <h2 class={styles.PageTitle}>Watch history</h2>
-                </div>
+                <h2 class={styles.PageTitle}>Watch history</h2>
 
                 <div class={styles.HistoryContent}>
                     <div class={styles.HistoryVideos}>
