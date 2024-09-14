@@ -1,0 +1,65 @@
+.Mask {
+    position: absolute;
+    top: 0; 
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal {
+    margin: 0;
+    padding: 32px;
+    width: 768px;
+    background: #222;
+    border-radius: 16px;
+}
+
+.Title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.Text {
+    font-size :14px;
+    color: #999;
+    line-height: 1.45;
+}
+
+.Actions {
+    margin-top: 32px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Actions button {
+    margin-left: 8px;
+    background: transparent;
+    border:none;
+    padding: 8px 16px;
+    border-radius: 64px;
+    cursor: pointer;
+}
+
+.CancelButton {
+    color: #fff;
+    font-weight: 700;
+}
+
+.CancelButton:hover {
+    background: #666;
+}
+
+.PrimaryButton {
+    color: #3ea6ff;
+    font-weight: 700;
+}
+
+.PrimaryButton:hover {
+    background: #194266;
+}

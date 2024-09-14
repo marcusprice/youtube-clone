@@ -2,8 +2,10 @@ import { createSignal, createMemo, For, Show } from "solid-js"
 import { User } from "../../types";
 import { user, setUser } from "../../store/user";
 import { history, deleteHistory } from "../../store/video"
+import Modal from "../../components/Modal/Modal";
 import HistoryTile from "../../components/HistoryTile/HistoryTile";
 import styles from "./History.module.css"
+import { modalPauseText, modalResumeText, modalDeleteText } from "./HistoryTextContent";
 
 function toggleHistory() {
     const updatedUser: User = {
@@ -20,6 +22,9 @@ function toggleHistory() {
 export default function History() {
     const [inputValue, setInputValue] = createSignal("");
     const [historyFilterVal, setHistoryFilterVal] = createSignal("");
+    const [modal, setModal] = createSignal<{visible: boolean, view: "delete" | "pause"}>(
+        { visible: false, view: "pause" }
+    )
 
     const historySetting = createMemo(() => user()?.settings.history);
     const filteredHistory = createMemo(
@@ -93,18 +98,27 @@ export default function History() {
                             </div>
                         </form>
 
-                        <button class={styles.HistoryButton} onClick={deleteHistory}>
+                        <button
+                            class={styles.HistoryButton}
+                            onClick={() => 
+                                setModal({visible: true, view: "delete"})
+                            }>
                             <i class="bx bx-trash" style="margin-right: 8px;"></i>
                             Clear all watch history
                         </button>
 
-                        <button class={styles.HistoryButton} onClick={toggleHistory}>
+                        <button
+                            class={styles.HistoryButton}
+                            onClick={() => 
+                                setModal({visible: true, view: "pause"})
+                            }
+                        >
                             <Show 
                                 when={historySetting()}
                                 fallback={(
                                     <>
                                         <i class="bx bx-play-circle" style="margin-right: 8px;"></i>
-                                        <span>Play watch history</span>
+                                        <span>Resume watch history</span>
                                     </>
                                 )}>
                                 <i class="bx bx-pause-circle" style="margin-right: 8px;"></i>
@@ -112,13 +126,44 @@ export default function History() {
                             </Show>
                         </button>
 
-                        <button class={styles.HistoryButton} onClick={deleteHistory}>
+                        <button class={styles.HistoryButton}>
                             <i class="bx bx-cog" style="margin-right: 8px;"></i>
                             Manage all history
                         </button>
                     </div>
                 </div>
             </div>
+
+            <Show when={modal().visible}>
+                {modal().view === "pause" &&
+                    <Modal 
+                        title={user()?.settings.history ? "Pause watch history?" : "Resume watch history?"}
+                        modalText={user()?.settings.history ?
+                            modalPauseText(user()?.first_name!, user()?.last_name!, user()?.username!) :
+                            modalResumeText(user()?.first_name!, user()?.last_name!, user()?.username!)
+                        }
+                        onCancel={() => {setModal((modal) => ({...modal, visible: false}))}}
+                        primaryActionLabel={user()?.settings.history ? "Pause" : "Resume"}
+                        onPrimary={()=> {
+                            toggleHistory();
+                            setModal({...modal(), visible: false});
+                        }}
+                    />
+                }
+
+                {modal().view === "delete" &&
+                    <Modal 
+                        title="Delete watch history?"
+                        modalText={modalDeleteText(user()?.first_name!, user()?.last_name!, user()?.username!)}
+                        primaryActionLabel="Delete"
+                        onCancel={() => {setModal((modal) => ({...modal, visible: false}))}}
+                        onPrimary={()=> {
+                            deleteHistory();
+                            setModal({...modal(), visible: false});
+                        }}
+                    />
+                }
+            </Show>
         </div>
     );
 }
