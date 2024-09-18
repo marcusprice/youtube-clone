@@ -10,7 +10,6 @@ import History from "./pages/History/History.tsx";
 import './index.css';
 
 export const [navExpanded, setNavExpanded] = createSignal(true);
-createEffect(() => console.log(navExpanded()))
 
 function Layout(props: RouteSectionProps): JSX.Element {
     const location = useLocation();
