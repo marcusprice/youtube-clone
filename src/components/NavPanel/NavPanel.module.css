@@ -41,16 +41,6 @@
     overflow: hidden;
 }
 
-.OffScreen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 256px;
-    background :red;
-    z-index: 1000;
-}
-
 .SideBar h2 {
     margin-top: 0;
     display: flex;

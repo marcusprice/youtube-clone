@@ -1,4 +1,4 @@
-import { createEffect, createResource, createSignal, For, Show } from "solid-js"
+import { createEffect, createResource, createSignal, For, onMount, Show } from "solid-js"
 import { useSearchParams } from "@solidjs/router";
 import { fetchVideo, fetchVideos } from "../../dao/videoDao"
 import { Video } from "../../types/"
@@ -7,6 +7,7 @@ import CommentSection from "../../components/CommentSection/CommentSection.tsx";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer.tsx";
 import styles from "./Watch.module.css"
 import NavPanel from "../../components/NavPanel/NavPanel.tsx";
+import { navExpanded, setNavExpanded } from "../../index.tsx";
 
 export default function Watch() {
     const [params] = useSearchParams()
@@ -14,6 +15,8 @@ export default function Watch() {
     const [video] = createResource(() => params.v, fetchVideo);
     const [videoSuggestions] = createResource(fetchVideos, {initialValue: []});
     const [theaterMode, setTheaterMode] = createSignal(false);
+
+    onMount(() => setNavExpanded(false));
 
     createEffect(() => {
         document.title = video()?.title ? video()?.title! + " - YouTube" : "Youtube";
@@ -31,7 +34,20 @@ export default function Watch() {
             id={containerId} 
             style={theaterMode() ? "flex-direction: column; padding-top: 0;" : ""}
         >
-            <NavPanel embedded={false} expanded={false} />
+            <Show when={navExpanded()}>
+                <div class={styles.SideMenuMask}>
+                    <div class={styles.SideMenu}>
+                        <button
+                            class={styles.MenuButton}
+                            onClick={() => setNavExpanded(false)}
+                        >
+                            <i class="bx bx-menu"></i>
+                        </button>
+                        <NavPanel embedded={false} expanded={false} />
+                    </div>
+                </div>
+            </Show>
+
             <div class={styles.Left}>
                 <VideoPlayer
                     theaterMode={theaterMode}

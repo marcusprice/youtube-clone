@@ -103,3 +103,43 @@
 .Right {
     width: 30%;
 }
+
+.SideMenuMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: transparent;
+}
+
+.SideMenu {
+    height: 100%;
+    width: 280px;
+    background: #141414;
+    padding-left: 16px;
+}
+
+.MenuButton {
+    cursor: pointer; 
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0;
+    margin-left: 11px;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    border: none;
+    margin-top: 8px;
+}
+
+.MenuButton:hover {
+    background: #232323;
+}
+

@@ -1,7 +1,8 @@
 import { Sub } from "../../types";
-import { createResource, createMemo, For, createEffect, Show, JSXElement } from "solid-js"
+import { createResource, createMemo, For, Show, JSXElement } from "solid-js"
 import { useLocation } from "@solidjs/router";
 import { fetchSubs } from "../../dao/userDao";
+import { setNavExpanded } from "../../index"
 import Avatar from "../Avatar/Avatar";
 import styles from "./NavPanel.module.css";
 
@@ -19,7 +20,6 @@ export default function NavPanel(props: NavPanelProps) {
         <nav
             classList={{
                 [styles.SideBar]: true,
-                [styles.OffScreen]: !props.embedded,
                 [styles.Condensed]: props.embedded && !props.expanded
             }}>
                 <Show 
@@ -28,6 +28,7 @@ export default function NavPanel(props: NavPanelProps) {
                         <ExpandedNav
                             subs={subs()}
                             route={route()}
+                            embedded={props.embedded} 
                         />
                     )}
                 >
@@ -82,7 +83,8 @@ function CondensedNav(): JSXElement {
 
 type ExpandedNavProps = {
     route: string,
-    subs: Sub[]
+    subs: Sub[],
+    embedded: boolean
 }
 
 function ExpandedNav(props: ExpandedNavProps): JSXElement {

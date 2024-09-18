@@ -45,9 +45,12 @@ render(() =>
                 <Route
                     path="/"
                     component={Home}
-                    load={() => {document.title = "YouTube"}}
+                    load={() => {document.title = "YouTube";}}
                 />
-                <Route path="/watch" component={Watch} />
+                <Route
+                    path="/watch"
+                    component={Watch}
+                />
                 <Route path="/history" component={History} />
             </Router>
         </div>,
