@@ -10,15 +10,36 @@ header {
     align-items: center;
 }
 
-.MenuLogo button {
+.MenuButton {
+    cursor: pointer; 
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0;
+    margin-left: 11px;
+    padding: 0;
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+.MenuButton:hover {
+    background: #232323;
+}
+
+.MenuLogo .Logo button {
+    margin-left: 16px;
     background: transparent;
     color: white;
     border: none;
-    font-size: 22px;
     display: flex;
     justify-content: center;
-    justify-content: space-between;
     margin-right: 16px;
+    font-size: 22px;
 }
 
 .PersonalBar {

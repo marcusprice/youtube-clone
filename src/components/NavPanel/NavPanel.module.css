@@ -6,24 +6,70 @@
     width: 256px;
 }
 
+.Condensed {
+    width: 64px !important;
+    margin-right: 32px;
+}
+
+.Condensed ul {
+    padding-top: 8px;
+}
+
+.CondensedItem a {
+    padding-left: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.CondensedItem i {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.CondensedItem span {
+    display: block;
+    width: 100%;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.OffScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 256px;
+    background :red;
+    z-index: 1000;
+}
+
 .SideBar h2 {
     margin-top: 0;
     display: flex;
     align-items: center;
 }
 
-.SideBar ul li {
+.ExpandedItem {
+    padding-left: 5px;
     display: flex;
     align-items: center;
 }
 
-.SideBar ul li a {
+.ExpandedItem a {
     text-decoration: none;
     color: #fff;
     width: 100%;
 } 
 
-.SideBar ul li a button {
+.ExpandedItem a button {
     width: 100%;
     border-radius: 10px;
     background: transparent;
@@ -36,16 +82,16 @@
     padding: 8px 16px;
 }
 
-.SideBar ul li a button:hover, .Selected {
+.ExpandedItem a button:hover, .Selected {
     background: #222 !important;
 }
 
-.SideBar ul li i {
+.ExpandedItem i {
     font-size: 24px;
     margin-right: 16px;
 }
 
-.SideBar ul li span {
+.ExpandedItem span {
     font-size: 16px;
 }
 

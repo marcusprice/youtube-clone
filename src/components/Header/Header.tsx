@@ -2,15 +2,22 @@ import { SearchBar, setInputValue, setFilterValue } from "../SearchBar/SearchBar
 import { user } from "../../store/user"
 import styles from "./Header.module.css"
 import Avatar from "../Avatar/Avatar.tsx";
+import { JSXElement } from "solid-js";
+import { setNavExpanded } from "../../index.tsx";
 
-export default function Header() {
+export default function Header(): JSXElement {
     return(
         <header>
             <div class={styles.MenuLogo}>
-                <button>
-                    <i class="bx bx-menu" style="font-size: 28px;"></i>
+                <button
+                    class={styles.MenuButton}
+                    onClick={() => setNavExpanded((prev) => !prev)}
+                >
+                    <i class="bx bx-menu"></i>
                 </button>
-                <a href="/" style="text-decoration: none; color: #fff;" onClick={() => {setFilterValue(""); setInputValue("")}}>
+
+
+                <a class={styles.Logo} href="/" style="text-decoration: none; color: #fff;" onClick={() => {setFilterValue(""); setInputValue("")}}>
                     <button style="cursor: pointer; display: flex; align-items: center;">
                         <img src="/src/assets/yt-icon.svg" style="height: 32px"/>
                         Premium

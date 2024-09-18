@@ -122,11 +122,6 @@ export default function History() {
                                 Pause watch history
                             </Show>
                         </button>
-
-                        <button class={styles.HistoryButton}>
-                            <i class="bx bx-cog" style="margin-right: 8px;"></i>
-                            Manage all history
-                        </button>
                     </div>
                 </div>
             </div>

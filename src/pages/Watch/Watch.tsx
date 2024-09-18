@@ -6,6 +6,7 @@ import VideoSideTile  from "../../components/VideoSideTile/VideoSideTile";
 import CommentSection from "../../components/CommentSection/CommentSection.tsx";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer.tsx";
 import styles from "./Watch.module.css"
+import NavPanel from "../../components/NavPanel/NavPanel.tsx";
 
 export default function Watch() {
     const [params] = useSearchParams()
@@ -28,7 +29,9 @@ export default function Watch() {
         <div
             class={styles.Watch}
             id={containerId} 
-            style={theaterMode() ? "flex-direction: column; padding-top: 0;" : ""}>
+            style={theaterMode() ? "flex-direction: column; padding-top: 0;" : ""}
+        >
+            <NavPanel embedded={false} expanded={false} />
             <div class={styles.Left}>
                 <VideoPlayer
                     theaterMode={theaterMode}

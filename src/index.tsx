@@ -1,5 +1,5 @@
 /* @refresh reload */
-import {  createMemo, JSX, Show } from "solid-js";
+import {  createSignal, createMemo, JSX, Show, createEffect } from "solid-js";
 import { Router, Route, RouteSectionProps, useLocation } from "@solidjs/router"
 import { render } from 'solid-js/web';
 import Header from './components/Header/Header.tsx';
@@ -8,6 +8,9 @@ import Watch from './pages/Watch/Watch.tsx';
 import NavPanel from "./components/NavPanel/NavPanel.tsx";
 import History from "./pages/History/History.tsx";
 import './index.css';
+
+export const [navExpanded, setNavExpanded] = createSignal(true);
+createEffect(() => console.log(navExpanded()))
 
 function Layout(props: RouteSectionProps): JSX.Element {
     const location = useLocation();
@@ -22,7 +25,10 @@ function Layout(props: RouteSectionProps): JSX.Element {
                     when={atWatchPage()}
                     fallback={(
                         <>
-                            <NavPanel />
+                            <NavPanel
+                                embedded={true}
+                                expanded={navExpanded()}
+                            />
                             {props.children}
                         </>
                     )}

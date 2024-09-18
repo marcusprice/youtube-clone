@@ -9,7 +9,7 @@ function formatViewCount(views: number): string {
     }
 }
 
-type VideoTile = {
+type VideoTileProps = {
     title: string,
     uploader: string,
     views: number,
@@ -17,22 +17,20 @@ type VideoTile = {
     uuid: string
 }
 
-export default function VideoTile({title, uploader, views, uploadedAt, uuid}: VideoTile) {
+export default function VideoTile(props: VideoTileProps) {
     return(
         <div class={styles.videoTile}>
-            <a href={`/watch?v=${uuid}`}>
+            <a href={`/watch?v=${props.uuid}`}>
                 <div class={styles.innerContainer}>
                     <div class={styles.videoPreview}></div>
                     <div>
-                        <div class={styles.uploaderAvatar}></div>
                         <div class={styles.videoInfo}>
-                            <span class={styles.videoTitle}>{title}</span>
-                            <span>{uploader}</span>
+                            <span class={styles.videoTitle}>{props.title}</span>
+                            <span>{props.uploader}</span>
                             <span>
-                                {formatViewCount(views)} views • {formatResourceDate(new Date(uploadedAt))}
+                                {formatViewCount(props.views)} views • {formatResourceDate(new Date(props.uploadedAt))}
                             </span>
                         </div>
-                        <div class={styles.moreActions}></div>
                     </div>
                 </div>
             </a>
