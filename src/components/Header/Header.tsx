@@ -1,17 +1,20 @@
+import { JSXElement, Setter } from "solid-js";
 import { SearchBar, setInputValue, setFilterValue } from "../SearchBar/SearchBar"
 import { user } from "../../store/user"
 import styles from "./Header.module.css"
 import Avatar from "../Avatar/Avatar.tsx";
-import { JSXElement } from "solid-js";
-import { setNavExpanded } from "../../index.tsx";
 
-export default function Header(): JSXElement {
+type HeaderProps = {
+    setNavExpanded: Setter<boolean>;
+}
+
+export default function Header(props: HeaderProps): JSXElement {
     return(
         <header>
             <div class={styles.MenuLogo}>
                 <button
                     class={styles.MenuButton}
-                    onClick={() => setNavExpanded((prev) => !prev)}
+                    onClick={() => props.setNavExpanded((prev) => !prev)}
                 >
                     <i class="bx bx-menu"></i>
                 </button>

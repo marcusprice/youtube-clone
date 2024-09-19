@@ -2,6 +2,7 @@
     width: 100%;
     padding: 32px 8px;
     height: calc(100vh - 104px);
+    height: 100%;
     display: flex;
     overflow: auto;
 }
@@ -116,9 +117,11 @@
 
 .SideMenu {
     height: 100%;
-    width: 280px;
+    overflow: hidden;
+    width: 311px;
     background: #141414;
-    padding-left: 16px;
+    padding-top: 12px;
+    padding-left: 24px;
 }
 
 .MenuButton {
@@ -136,7 +139,7 @@
     background: transparent;
     color: #fff;
     border: none;
-    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
 .MenuButton:hover {

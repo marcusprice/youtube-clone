@@ -1,12 +1,11 @@
 import { Video } from '../../types';
-import { Component, createResource, createSignal, For, createMemo, createEffect, onMount} from 'solid-js';
+import { Component, createResource, createSignal, For, createMemo, createEffect } from 'solid-js';
 import { useSearchParams } from "@solidjs/router"
 import { filterValue, setFilterValue, setInputValue } from '../../components/SearchBar/SearchBar';
 import { fetchTags } from "../../dao/videoDao";
 import { videoResource } from '../../store/video';
 import Tag from '../../components/Tag/Tag';
 import VideoTile from '../../components/VideoTile/VideoTile';
-import { setNavExpanded } from '../..';
 import styles from './Home.module.css';
 
 export const [selectedTag, setSelectedTag] = createSignal<number>(0);
@@ -15,8 +14,6 @@ const App: Component = () => {
     const [params] = useSearchParams();
     const [tags] = createResource(fetchTags, {initialValue: ["Freeskate broskie"]});
     const [videos, setVideos] = createSignal<Video[]>([]);
-
-    onMount(() => setNavExpanded(true));
 
     if (params.s) {
         setSelectedTag(0);
