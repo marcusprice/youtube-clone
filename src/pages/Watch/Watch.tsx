@@ -8,6 +8,7 @@ import VideoPlayer from "../../components/VideoPlayer/VideoPlayer.tsx";
 import styles from "./Watch.module.css"
 import NavPanel from "../../components/NavPanel/NavPanel.tsx";
 import { watchNavExpanded, setWatchNavExpanded } from "../../index.tsx";
+import { setInputValue, setFilterValue } from "../../components/SearchBar/SearchBar"
 
 export default function Watch() {
     const [params] = useSearchParams()
@@ -119,12 +120,21 @@ export default function Watch() {
             <Show when={watchNavExpanded()}>
                 <div class={styles.SideMenuMask} onClick={() => setWatchNavExpanded(false)}>
                     <div class={styles.SideMenu} onClick={(e) => e.stopPropagation()}>
-                        <button
-                            class={styles.MenuButton}
-                            onClick={() => setWatchNavExpanded(false)}
-                        >
-                            <i class="bx bx-menu"></i>
-                        </button>
+                        <div class={styles.SideMenuTop}>
+                            <button
+                                class={styles.MenuButton}
+                                onClick={() => setWatchNavExpanded(false)}
+                            >
+                                <i class="bx bx-menu"></i>
+                            </button>
+
+                            <a class={styles.Logo} href="/" style="text-decoration: none; color: #fff;" onClick={() => {setFilterValue(""); setInputValue("")}}>
+                                <button style="cursor: pointer; display: flex; align-items: center;">
+                                    <img src="/src/assets/yt-icon.svg" style="height: 32px"/>
+                                    Premium
+                                </button>
+                            </a>
+                        </div>
                         <NavPanel embedded={false} expanded={false} />
                     </div>
                 </div>
