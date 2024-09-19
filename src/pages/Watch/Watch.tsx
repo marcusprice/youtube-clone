@@ -31,74 +31,26 @@ export default function Watch() {
     });
 
     return(
-        <div
-            class={styles.Watch}
-            id={containerId} 
-            style={theaterMode() ? "flex-direction: column; padding-top: 0;" : ""}
-        >
-            <Show when={watchNavExpanded()}>
-                <div class={styles.SideMenuMask} onClick={() => setWatchNavExpanded(false)}>
-                    <div class={styles.SideMenu} onClick={(e) => e.stopPropagation()}>
-                        <button
-                            class={styles.MenuButton}
-                            onClick={() => setWatchNavExpanded(false)}
-                        >
-                            <i class="bx bx-menu"></i>
-                        </button>
-                        <NavPanel embedded={false} expanded={false} />
-                    </div>
-                </div>
-            </Show>
-
-            <div class={styles.Left}>
-                <VideoPlayer
-                    theaterMode={theaterMode}
-                    setTheaterMode={setTheaterMode}
-                    src="./src/assets/gimbal.mp4" 
-                />
-                <h2>{video()?.title}</h2>
+        <>
+            <div
+                class={styles.Watch}
+                id={containerId} 
+                style={theaterMode() ? "flex-direction: column; padding-top: 0;" : ""}
+            >
+                <div class={styles.Left}>
+                    <VideoPlayer
+                        theaterMode={theaterMode}
+                        setTheaterMode={setTheaterMode}
+                        src="./src/assets/gimbal.mp4" 
+                    />
+                    <h2>{video()?.title}</h2>
 
 
-                <Show when={!theaterMode()}>
-                    <Show when={video()}>
-                        <VideoInfo video={video()!}/>
-                    </Show>
-
-                    <div class={styles.Description}>
-                        <strong>21,367 views  Mar 17, 2023</strong> <br />
-                        Original song by Sean Booth and Rob Brown (of Autechre).
-                        Inspired from artwork by Alex Rutterford.
-                        <br />
-                        <br />
-                        I do not own the rights to the song used in this video, The respective rights holders may request removal.
-                    </div>
-                    <CommentSection />
-                </Show>
-            </div>
-
-            <Show when={!theaterMode()}>
-                <div class={styles.Right}>
-                    <For each={videoSuggestions()}>
-                        {(video) => 
-                            <VideoSideTile
-                                title={video.title} 
-                                uploader={video.uploader}
-                                views ={video.views}
-                                uploadedAt={video.uploaded_at}
-                                uuid={video.uuid}
-                                containerId={containerId}
-                            />
-                        }
-                    </For>
-                </div>
-            </Show>
-
-            <Show when={theaterMode()}>
-                <div style="display: flex;">
-                    <div class={styles.Left}>
+                    <Show when={!theaterMode()}>
                         <Show when={video()}>
                             <VideoInfo video={video()!}/>
                         </Show>
+
                         <div class={styles.Description}>
                             <strong>21,367 views  Mar 17, 2023</strong> <br />
                             Original song by Sean Booth and Rob Brown (of Autechre).
@@ -108,8 +60,10 @@ export default function Watch() {
                             I do not own the rights to the song used in this video, The respective rights holders may request removal.
                         </div>
                         <CommentSection />
-                    </div>
+                    </Show>
+                </div>
 
+                <Show when={!theaterMode()}>
                     <div class={styles.Right}>
                         <For each={videoSuggestions()}>
                             {(video) => 
@@ -124,9 +78,58 @@ export default function Watch() {
                             }
                         </For>
                     </div>
+                </Show>
+
+                <Show when={theaterMode()}>
+                    <div style="display: flex;">
+                        <div class={styles.Left}>
+                            <Show when={video()}>
+                                <VideoInfo video={video()!}/>
+                            </Show>
+                            <div class={styles.Description}>
+                                <strong>21,367 views  Mar 17, 2023</strong> <br />
+                                Original song by Sean Booth and Rob Brown (of Autechre).
+                                Inspired from artwork by Alex Rutterford.
+                                <br />
+                                <br />
+                                I do not own the rights to the song used in this video, The respective rights holders may request removal.
+                            </div>
+                            <CommentSection />
+                        </div>
+
+                        <div class={styles.Right}>
+                            <For each={videoSuggestions()}>
+                                {(video) => 
+                                    <VideoSideTile
+                                        title={video.title} 
+                                        uploader={video.uploader}
+                                        views ={video.views}
+                                        uploadedAt={video.uploaded_at}
+                                        uuid={video.uuid}
+                                        containerId={containerId}
+                                    />
+                                }
+                            </For>
+                        </div>
+                    </div>
+                </Show>
+            </div>
+
+
+            <Show when={watchNavExpanded()}>
+                <div class={styles.SideMenuMask} onClick={() => setWatchNavExpanded(false)}>
+                    <div class={styles.SideMenu} onClick={(e) => e.stopPropagation()}>
+                        <button
+                            class={styles.MenuButton}
+                            onClick={() => setWatchNavExpanded(false)}
+                        >
+                            <i class="bx bx-menu"></i>
+                        </button>
+                        <NavPanel embedded={false} expanded={false} />
+                    </div>
                 </div>
             </Show>
-        </div>
+        </>
     ) 
 }
 

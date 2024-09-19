@@ -45,6 +45,7 @@ header {
 .PersonalBar {
     display: flex;
     align-items: center;
+    margin-right: 11px;
 }
 
 .Cast, .Notifications {
