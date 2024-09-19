@@ -47,14 +47,17 @@ render(() =>
             <Router root={Layout}>
                 <Route
                     path="/"
-                    component={Home}
+                    component={() => <Home navExpanded={navExpanded()} />}
                     load={() => {document.title = "YouTube";}}
                 />
                 <Route
                     path="/watch"
                     component={Watch}
                 />
-                <Route path="/history" component={History} />
+                <Route
+                    path="/history"
+                    component={History}
+                />
             </Router>
         </div>,
     document.getElementById("root")!

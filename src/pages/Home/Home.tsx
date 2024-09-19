@@ -1,5 +1,5 @@
 import { Video } from '../../types';
-import { Component, createResource, createSignal, For, createMemo, createEffect } from 'solid-js';
+import { createResource, createSignal, createEffect, For, createMemo, JSXElement } from 'solid-js';
 import { useSearchParams } from "@solidjs/router"
 import { filterValue, setFilterValue, setInputValue } from '../../components/SearchBar/SearchBar';
 import { fetchTags } from "../../dao/videoDao";
@@ -10,7 +10,11 @@ import styles from './Home.module.css';
 
 export const [selectedTag, setSelectedTag] = createSignal<number>(0);
 
-const App: Component = () => {
+type HomeProps = {
+    navExpanded: boolean;
+}
+
+function Home(props: HomeProps): JSXElement {
     const [params] = useSearchParams();
     const [tags] = createResource(fetchTags, {initialValue: ["Freeskate broskie"]});
     const [videos, setVideos] = createSignal<Video[]>([]);
@@ -72,7 +76,11 @@ const App: Component = () => {
 
             </div>
 
-            <div class={styles.Videos}>
+            <div
+                class={`
+                    ${styles.Videos}
+                    ${props.navExpanded ? styles.ThreeColumn : styles.FourColumn}`}
+            >
                 <For each={videos()}>
                     {({title, uploader, views, uploaded_at, uuid}) => {
                         return (
@@ -90,4 +98,4 @@ const App: Component = () => {
     );
 };
 
-export default App;
+export default Home;
