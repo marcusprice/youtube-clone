@@ -7,6 +7,12 @@
     width: 35%;
     aspect-ratio: 16/9;
     border-radius: 10px;
+}
+
+.PreviewWindow div {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     background-size: cover;
     background-position: center center;
 }
@@ -48,6 +54,7 @@
 .Title {
     font-weight: 700;
     margin-bottom: 4px;
+    color: #fff;
 }
 
 .AddInfo {
@@ -68,4 +75,10 @@
     width: 100%;
     height: 100%;
     text-overflow: ellipsis;
+    color: #999;
+    text-decoration: none;
+}
+
+.Link {
+    text-decoration: none;
 }

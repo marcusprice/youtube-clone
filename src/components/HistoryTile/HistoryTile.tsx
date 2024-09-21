@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router";
 import { removeVideoFromHistory } from "../../store/video";
 import { Video } from "../../types";
 import styles from "./HistoryTile.module.css";
@@ -9,21 +10,25 @@ type HistoryTileProps = {
 export default function HistoryTile(props: HistoryTileProps) {
     return(
         <div class={styles.HistoryTile}>
-            <div
+            <a 
                 class={styles.PreviewWindow} 
-                style={`background-image: url('/src/assets/images/${props.video.thumbnail}')`}
-            />
+                href={`/watch?v=${props.video.uuid}`}>
+                <div
+                    style={`background-image: url('/src/assets/images/${props.video.thumbnail}')`}
+                />
+            </a>
 
             <div class={styles.VideoInfo}>
                 <div class={styles.VideoTitleBar}>
                     <div class={styles.Left}>
-                        <div class={styles.Title}>
-                            <strong>{props.video.title}</strong>
-                        </div>
-                        <div class={styles.AddInfo}>
-                            {props.video.uploader.username} • {props.video.views} views
-                        </div>
-
+                        <a class={styles.Link} href={`/watch?v=${props.video.uuid}`}>
+                            <div class={styles.Title}>
+                                <strong>{props.video.title}</strong>
+                            </div>
+                            <div class={styles.AddInfo}>
+                                {props.video.uploader.username} • {props.video.views} views
+                            </div>
+                        </a>
                     </div>
                     <div class={styles.Right}>
                         <button
@@ -37,9 +42,11 @@ export default function HistoryTile(props: HistoryTileProps) {
                 </div> 
 
                 <div class={styles.Desc}>
+                    <a class={styles.Link} href={`/watch?v${props.video.uuid}`}>
                     <span>
                         {props.video.description}
                     </span>
+                    </a>
                 </div>
             </div>
         </div>
