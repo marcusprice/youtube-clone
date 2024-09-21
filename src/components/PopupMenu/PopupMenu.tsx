@@ -1,21 +1,10 @@
 import { createSignal, JSXElement, onMount, Show } from "solid-js";
 import styles from "./PopupMenu.module.css";
-import { createStore } from "solid-js/store";
 
 type PopupMenuProps = {
     size: "sm" | "md",
     children: JSXElement,
     direction: "left" | "right",
-    childID: string
-}
-
-function getYPos(clientY: number, y: number): "bottom" | "top" {
-    const posTop = y > clientY * .9;
-    if (posTop) {
-        return "top";
-    } else {
-        return "bottom";
-    }
 }
 
 export default function PopupMenu(props: PopupMenuProps): JSXElement {

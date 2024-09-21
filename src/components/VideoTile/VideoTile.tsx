@@ -1,6 +1,7 @@
 import { Video } from "../../types";
 import { formatResourceDate } from "../../util"
 import Avatar from "../Avatar/Avatar";
+import PopupMenu from "../PopupMenu/PopupMenu";
 import styles from "./VideoTile.module.css"
 
 function formatViewCount(views: number): string {
@@ -47,9 +48,17 @@ export default function VideoTile(props: VideoTileProps) {
                     </div>
 
                     <div class={styles.MenuButton}>
-                        <button>
-                            <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
+                        <PopupMenu direction="right" size="sm">
+                            <li><i class="bx bx-list-check"></i> Add the queue</li>
+                            <li><i class="bx bx-time-five"></i> Save to watch later</li>
+                            <li><i class="bx bx-bookmark"></i> Save to playlist</li>
+                            <li><i class="bx bxs-download"></i> Download</li>
+                            <li><i class="bx bx-share"></i> Share</li>
+                            <hr style="margin: 8px; 0;"/>
+                            <li><i class="bx bx-dislike"></i> Not interested</li>
+                            <li><i class="bx bx-minus-circle"></i> Don't recommend channel</li>
+                            <li><i class="bx bx-flag"></i> Report</li>
+                        </PopupMenu>
                     </div>
                 </div>
             </div>

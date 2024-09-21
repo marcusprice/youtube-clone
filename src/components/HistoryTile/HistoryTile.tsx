@@ -41,7 +41,6 @@ export default function HistoryTile(props: HistoryTileProps) {
                             <PopupMenu
                                 size="md"
                                 direction="right"
-                                childID={`historyPopup-${props.video.uuid}`}
                             >
                                 <li><i class="bx bx-list-check"></i> Add the queue</li>
                                 <li><i class="bx bx-time-five"></i> Save to watch later</li>
