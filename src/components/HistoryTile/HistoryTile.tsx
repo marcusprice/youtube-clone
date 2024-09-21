@@ -1,7 +1,7 @@
-import { A } from "@solidjs/router";
 import { removeVideoFromHistory } from "../../store/video";
 import { Video } from "../../types";
 import styles from "./HistoryTile.module.css";
+import PopupMenu from "../PopupMenu/PopupMenu";
 
 type HistoryTileProps = {
     video: Video
@@ -37,7 +37,19 @@ export default function HistoryTile(props: HistoryTileProps) {
                         >
                             <i class="bx bx-x"></i>
                         </button>
-                        <button style="margin-left: 8px;"><i class="bx bx-dots-vertical-rounded" style="font-size: 20px;"></i></button>
+                        <div>
+                            <PopupMenu
+                                size="md"
+                                direction="right"
+                                childID={`historyPopup-${props.video.uuid}`}
+                            >
+                                <li><i class="bx bx-list-check"></i> Add the queue</li>
+                                <li><i class="bx bx-time-five"></i> Save to watch later</li>
+                                <li><i class="bx bx-bookmark"></i> Save to playlist</li>
+                                <li><i class="bx bxs-download"></i> Download</li>
+                                <li><i class="bx bx-share"></i> Share</li>
+                            </PopupMenu>
+                        </div>
                     </div>
                 </div> 
 

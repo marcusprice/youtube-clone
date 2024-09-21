@@ -47,6 +47,10 @@
     border-radius: 100%;
 }
 
+.RemoveVideo {
+    margin-right: 8px;
+}
+
 .RemoveVideo:hover {
     background: #333;
 }

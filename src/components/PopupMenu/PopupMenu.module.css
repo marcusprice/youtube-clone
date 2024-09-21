@@ -1,0 +1,53 @@
+.PopupMenu {
+    position: relative;
+}
+
+.Button {
+    width: 36px;
+    height: 36px;
+    font-size: 30px;
+}
+
+.Button:hover {
+    background: #232323;
+}
+
+.PopupMenu ul {
+    background: #333;
+    margin: 0;
+    padding: 14px 0;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    white-space: nowrap;
+    width: max-content;
+    border-radius: 16px;
+}
+
+.Left ul {
+    left: 0;
+}
+
+.Right ul {
+    right: 0;
+}
+
+.PopupMenu ul li {
+    background: inherit;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 8px 32px;
+    width: 100%;
+}
+
+.PopupMenu ul li:hover {
+    background: #666;
+    cursor: pointer;
+}
+
+.PopupMenu ul li i {
+    font-size: 22px;
+    margin-right: 16px;
+}
+
