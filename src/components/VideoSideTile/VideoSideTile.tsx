@@ -1,18 +1,15 @@
 import { A } from "@solidjs/router"
 import styles from "./VideoSideTile.module.css"
+import { Video } from "../../types"
 
-type VideoSideTile = {
-    title: string,
-    uploader: string,
-    views: number,
-    uploadedAt: string,
-    uuid: string
-    containerId: string
+type VideoSideTileProps = {
+    containerId: string,
+    video: Video
 }
 
-export default function VideoSideTile({title, uploader, views, uploadedAt, uuid, containerId}: VideoSideTile) {
+export default function VideoSideTile(props: VideoSideTileProps) {
     const linkHandler = () => {
-        const container = document.getElementById(containerId);
+        const container = document.getElementById(props.containerId);
         container?.scrollTo({top: 0, left: 0, behavior: "smooth"});
     }
 
@@ -20,20 +17,22 @@ export default function VideoSideTile({title, uploader, views, uploadedAt, uuid,
         <div class={styles.VideoSideTile}>
             <A 
                 class={styles.Preview}
-                href={`/watch?v=${uuid}`}
+                href={`/watch?v=${props.video.uuid}`}
                 onClick={linkHandler}
             >
-                <div></div>
+                <div
+                    style={`background-image: url('/src/assets/images/${props.video.thumbnail}')`}
+                ></div>
             </A>
                 <div class={styles.Info}>
-                <A href={`/watch?v=${uuid}`} style="text-decoration: none; color: #fff;" onClick={linkHandler}>
-                    <span style="display: block;">{title}</span>
+                <A href={`/watch?v=${props.video.uuid}`} style="text-decoration: none; color: #fff;" onClick={linkHandler}>
+                    <span style="display: block;">{props.video.title}</span>
                     <span style="display: block; margin-top: 4px; display: flex; align-items: center;">
-                        {uploader}
+                        {props.video.uploader.username}
                         <i style="margin-left: 4px; font-size: 16px;" class="lni lni-checkmark-circle"></i>
                     </span>
                     <div>
-                        {views} * {uploadedAt}
+                        {props.video.views} * {props.video.uploaded_at}
                     </div>
                 </A>
                 </div>

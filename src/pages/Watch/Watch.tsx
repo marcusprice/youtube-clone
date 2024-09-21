@@ -69,11 +69,7 @@ export default function Watch() {
                         <For each={videoSuggestions()}>
                             {(video) => 
                                 <VideoSideTile
-                                    title={video.title} 
-                                    uploader={video.uploader}
-                                    views ={video.views}
-                                    uploadedAt={video.uploaded_at}
-                                    uuid={video.uuid}
+                                    video={video}
                                     containerId={containerId}
                                 />
                             }
@@ -102,11 +98,7 @@ export default function Watch() {
                             <For each={videoSuggestions()}>
                                 {(video) => 
                                     <VideoSideTile
-                                        title={video.title} 
-                                        uploader={video.uploader}
-                                        views ={video.views}
-                                        uploadedAt={video.uploaded_at}
-                                        uuid={video.uuid}
+                                        video={video}
                                         containerId={containerId}
                                     />
                                 }

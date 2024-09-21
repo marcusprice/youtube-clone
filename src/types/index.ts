@@ -19,14 +19,22 @@ export type Sub = {
 
 
 export type Video = {
+    uploader: Uploader,
+
     title: string,
-    uploader: string,
+    thumbnail: string,
     uploaded_at: string,
     views: number,
     category: string,
     uuid: string
-    likes: number;
-    description: string;
+    likes: number,
+    description: string
+}
+
+export type Uploader = {
+    avatar: string,
+    verified: boolean,
+    username: string
 }
 
 export type Comment = {

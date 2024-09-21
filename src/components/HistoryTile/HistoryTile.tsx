@@ -9,7 +9,10 @@ type HistoryTileProps = {
 export default function HistoryTile(props: HistoryTileProps) {
     return(
         <div class={styles.HistoryTile}>
-            <div class={styles.PreviewWindow} />
+            <div
+                class={styles.PreviewWindow} 
+                style={`background-image: url('/src/assets/images/${props.video.thumbnail}')`}
+            />
 
             <div class={styles.VideoInfo}>
                 <div class={styles.VideoTitleBar}>
@@ -18,7 +21,7 @@ export default function HistoryTile(props: HistoryTileProps) {
                             <strong>{props.video.title}</strong>
                         </div>
                         <div class={styles.AddInfo}>
-                            {props.video.uploader} • {props.video.views} views
+                            {props.video.uploader.username} • {props.video.views} views
                         </div>
 
                     </div>

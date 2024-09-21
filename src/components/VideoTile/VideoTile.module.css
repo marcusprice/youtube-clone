@@ -1,29 +1,81 @@
-.videoTile a {
+.VideoTile a {
     text-decoration: none;
     color: #fff;
 }
 
-.innerContainer {
+.InnerContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.videoPreview {
+.VideoPreview {
     width: 100%;
     aspect-ratio: 16 / 9;
     background: gray;
     border-radius: 12px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
+    background-size: cover;
+    background-position: center center;
 }
 
-.videoInfo span {
+.VideoInfo {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.VideoInfoLeft {
+    display: flex;
+}
+
+.AvatarContainer {
+    flex-grow: 0;
+}
+
+.VideoText {
+    margin-left: 8px;
+}
+
+.VideoText span {
     display: block;
     font-size: 14px;
 }
 
-.videoTitle {
+.VideoTitle {
     font-size: 16px !important;
     font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.Uploader {
+    display : flex;
+    align-items: center;
     margin-bottom: 4px;
+}
+
+.Uploader, .AddInfo {
+    color: #bbb;
+}
+
+.MenuButton {
+    margin-left: 4px; 
+    flex-grow: 0; 
+}
+
+.MenuButton button {
+    flex-grow: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    color: #fff;
+    background: transparent;
+    padding: 2px;
+    font-size: 18px;
+    border: none;
+    cursor:pointer;
+}
+
+.MenuButton button:hover {
+    background: #222;
 }

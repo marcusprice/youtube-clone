@@ -82,18 +82,15 @@ function Home(props: HomeProps): JSXElement {
                     ${props.navExpanded ? styles.ThreeColumn : styles.FourColumn}`}
             >
                 <For each={videos()}>
-                    {({title, uploader, views, uploaded_at, uuid}) => {
+                    {(video) => {
                         return (
                             <VideoTile 
-                                title={title}
-                                uploader={uploader}
-                                views={views}
-                                uploadedAt={uploaded_at}
-                                uuid={uuid}
+                                video={video}
                             />)
                     }}
                 </For>
             </div>
+
         </div>
     );
 };
