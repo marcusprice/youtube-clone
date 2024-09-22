@@ -5,6 +5,7 @@ import { Comment } from "../../types/"
 import { fetchComments } from "../../dao/commentDao";
 import styles from "./CommentSection.module.css";
 import { formatResourceDate } from "../../util"
+import PopupMenu from "../PopupMenu/PopupMenu";
 
 type CommentPost = {
     comment: Comment
@@ -35,7 +36,9 @@ function CommentPost({comment}: CommentPost) {
             </div>
 
             <div>
-                <i class="bx bx-dots-vertical-rounded" style="font-size: 24px;"></i>
+                <PopupMenu direction="right" size="sm">
+                    <li><i class="bx bx-flag"></i> Report</li>
+                </PopupMenu>
             </div>
         </div>
     );
